@@ -113,35 +113,23 @@
 /* ==== product start ==== */
         .main-product{
             width: 100%;
-            height: 500px;
-            background-image: url(http://picsum.photos/1900/800/?radom=2);
-            background-repeat  : no-repeat;
-            background-position: center; 
-            /* top: 0;
-            left: 0;
-            right: 0;
+            height: 700px;
+            background: url(http://picsum.photos/1900/800/?radom=2)no-repeat center center / cover;
             display: flex;
-            color: #fff;
-            align-items: center; */
-            /* position: relative; */
+            justify-content: center;
+            align-items: center;
         }
-        /* .main-product .product-container{
-            width: 100%;
-            height: 100%;
-            position: relative;
-        } */
         .main-product .onsale{
-            /* width: 100%; */
-            max-width: 1200px;
-            height: 400px;
+            width: 1200px;
+            height: 500px;
+            background-color: rgba(0,0,0,.5);
+            backdrop-filter: blur(5px);  /*霧面毛玻璃效果*/
             border: 5px solid #eee;
             color: #fff;
-            /* position: absolute; */
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* line-height: 400px; */
-            /* justify-content: center;
-            align-items: center; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             margin: auto;
         }
         .main-product .onsale h1{
