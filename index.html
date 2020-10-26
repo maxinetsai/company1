@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>company-1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        /* @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap);
+        @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css); */
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        body{
+            width: 100%;
+            /* height: 100%; */
+            /* bottom: 0; */
+            /* margin: auto; */
+        }
+        .main-header{
+            background: #333;
+        }
+        .main-header .container{
+            display: flex;
+            align-items: center;
+            padding: 20px 0px;
+            max-width: 1140px;
+            margin: auto;
+        }
+        .main-header .logo{
+            width: 100px;   
+        }
+        .main-header .logo img{
+            width: 100%;             /*圖片自動依據class=logo自動100%縮放*/
+            vertical-align: middle;
+        }
+        .main-header .main-nav{
+            margin: auto;          /*將剩餘空間自動分配給物件左右空間,所以nav會置中*/
+            display: flex;
+        }
+        .main-header .main-nav a{
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 1em;
+            position: relative;
+            transform: translateY(0px);
+            transition: .25s;
+        }
+        .main-header .main-nav a:hover{
+            transform: translateY(-8px);
+        }
+        .main-header .main-nav a:after{
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: -5px;
+            height: 0;
+            border-bottom: 1px solid #fff;
+            transition: .3s;
+        }
+        .main-header .main-nav a:hover:after{
+            left: 0;
+            right: 0;
+        }
+        .main-header .header-search{
+            display: flex;
+            position: relative;
+        }
+        .main-header .header-search button,
+        .main-header .header-search input{
+            border: none;
+            background-color: #fff;
+            padding: 10px 10px;
+            user-select: none;
+        }
+        .main-header .header-search button:focus,
+        .main-header .header-search input:focus{
+            outline: none;
+        }
+        .main-header .header-search button{
+            border-radius: 0 200px 200px 0;
+        }
+        .main-header .header-search input{
+            border-radius: 200px 0 0 200px;
+        }
+        .main-header .header-icon i{
+            /* width: 30px;
+            height: 30px; */
+            padding: 10px 10px;
+            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            right: -50px;
+            top: 0;
+        }
+/* ==== product start ==== */
+        .main-product{
+            background-image: url(http://picsum.photos/1900/800/?radom=2);
+            background-repeat  : no-repeat;
+            background-position: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: center;
+            color: #fff;
+            align-items: center;
+            position: relative;
+        }
+        .main-product:after{
+            content: '';
+            position: absolute;
+            padding: 60px 0;
+            background-color: rgba(48, 48, 48, 0.7);
+        }
+        .main-product .product-container{
+
+        }
+        .main-product .onsale{
+            width: 100%;
+            height: 400px;
+            max-width: 1200px;
+            border: 5px solid #ccc; 
+            margin: 0 auto;
+        }
+        .main-product .onsale h1{
+            font-weight: 700;
+            font-size: 70px;
+            padding: 30px 20px 0;
+        }
+        .main-product .onsale h3{
+            font-weight: 400;
+            font-size: 40px;
+            padding: 0px 20px 30px;
+            text-shadow: 1px 1px 2px #333;
+        }
+        .main-product .onsale p{
+            text-align: center;
+            padding: 30px 20px;
+            text-shadow: 1px 1px 2px #333;
+        }
+        .main-product .onsale button{
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 3px;
+            border: none;
+            background-image: linear-gradient(45deg,rgb(248, 160, 60),rgb(207, 88, 19));
+            display: flex;
+            margin: 20px auto ;
+        }
+        .main-product .onsale button:focus{
+            outline: none;
+        }
+        .main-product .onsale button a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+/* ==== footer start ==== */
+        footer{
+            position: relative;
+            width: 100%;
+            top: 40%;
+        }
+        .footer-header{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100px;
+            background-color: #333;
+            color: #fff;
+            padding-right: 200px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+        .footer-header h3{
+            padding-right: 20px;
+        }
+
+        .footer-header i{
+            color: #fff;
+            padding: 0 15px 0 15px;
+            position: relative;
+        }
+        .footer-header i:after{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .container{
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 60px 0px;
+            margin: auto;
+        }
+        .container .item{
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 50px 0 0;
+            /* border: 1px solid #fa0; */
+        }
+        .container .item h3{
+            font-size: 16px;
+            padding-bottom: 1em;
+            font-weight: 500;
+            position: relative;
+        }
+        .container .item h3:before{
+            content: '';
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 1.7em;
+            border-bottom: 1px solid  rgba(255, 255, 255, 0.6);
+            transform: scaleX(1);
+            animation: 3s ease-in slidein;
+        }
+        @keyframes slidein{
+              0%{ transform: scaleX(1); }
+             50%{ transform: scaleX(0); }
+            100%{ transform: scaleX(1); }
+        }
+        .container .item h3:after{
+            content: '';
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 1.7em;
+            border-bottom: 1px solid  rgba(255, 255, 255, .1);
+        }
+        .container .item a{
+            font-size: 14px;
+            text-decoration: none;
+            color: #ccc;
+            padding-top: 0.5em;
+        }
+        .container .item img{
+            width: 80px;
+        }
+
+        .container .item info{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/coca-cola-circle-logo.png" alt="CSS Coke  | CSS練習">
+            </a>
+            <nav class="main-nav">
+                <a href="#">首頁</a>
+                <a href="#">門市據點</a>
+                <a href="#">購物商城</a>
+                <a href="#">我的帳戶
+            </nav>
+            <form action="" class="header-search">
+                <input type="search" placeholder="Search...">
+                <button><a href="#"><i class="fa fa-search"></i></a></button>
+                             <div class="header-icon">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>                   
+               </div>
+            </form>
+        </div>
+    </header>
+        <div class="main-product">
+            <div class="procduct-container">
+                <div class="onsale">
+                    <h1>國民保健第一品牌</h1>
+                    <h3>照顧全家的的健康</h3>
+                    <p>幫您節省一半以上的保健食品費用支出，不用再比價。
+                    </p>
+                    <button><a href="#">瞭解更多</a></button>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        <div class="footer-header">
+            <h3>社群連結：</h3>
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+
+        </div>
+        <div class="container">
+            <div class="item">
+                <h3>公司介紹</h3>
+                <a href="#">關於我們</a>
+                <a href="#">送貨方式</a>
+                <a href="#">網站隱私權政策</a>
+                <a href="#">會員條款</a>
+                <a href="#">選項-001</a>
+                <a href="#">選項-001</a>
+            </div>
+            <div class="item">
+                <h3>顧客服務</h3>
+                <a href="#">首頁</a>
+                <a href="#">購物商城</a>
+                <a href="#">結帳</a>
+                <a href="#">分店地址</a>
+                <a href="#">聯絡我們</a>
+                <a href="#">網站地圖</a>
+            </div>
+            <div class="item">
+                <h3>各分店地址連絡電話</h3>
+                <a href="#">台北-中山門市</a>
+                <a href="#">新竹-竹科門市</a>
+                <a href="#">台中-逢甲門市</a>
+                <a href="#">台南-站前門市</a>
+                <a href="#">高雄-三民門市</a>
+                <a href="#">宜蘭-羅東門市</a>
+            </div>
+            <div class="item">
+                <h3>聯絡我們</h3>
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/coca-cola-circle-logo.png" alt="LOGO">
+                    </a>
+                </div>
+                <div class="info">
+                <p>總部地址 :</p><p>台南市關廟區中正路376巷7號</pn>
+                <h5>郵件 :</h5><pn>butterflylove@kwantex.com</p>
+                <h5>電話 : </h5><p>06-5963101</pn>
+                <h5>營業 : </h5><p>8 AM - 6 PM : 星期一~星期五</p>
+                </div>
+            </div>  
+        </div>
+    </footer>
+
+
+</body>
+</html>
