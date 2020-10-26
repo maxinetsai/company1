@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>company-1</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <style type="text/css">
         /* @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap);
         @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css); */
@@ -125,7 +125,7 @@
             width: 100%;
             height: 400px;
             max-width: 1200px;
-            border: 5px solid #ccc; 
+            border: 5px solid #eee; 
             margin: 0 auto;
         }
         .main-product .onsale h1{
@@ -160,6 +160,123 @@
             text-decoration: none;
             color: #fff;
         }
+
+
+/* ==== product start ==== */
+
+        .product-wrap{
+            width: 100%;
+            
+        }
+        .product-wrap .container{
+            display: flex;
+            align-items: center;
+        }
+        .product-wrap .item{
+            text-align: center;
+            width: 369px;
+            padding: 0 0 2em 0;
+            margin: 100px auto;
+            background: #fff;
+            position: relative;
+        }
+        .product-wrap .item:hover{
+            box-shadow:0px 0px 5px #aaaaaa;
+        }
+        .product-wrap .item .pic{
+            width: 370px;
+        }
+        .product-wrap .item .pic img{
+            width: 100%;
+            align-items: center;
+            vertical-align: middle;
+        }
+        .product-wrap .item .new:before{
+            content: '新產品';
+            width: 80px;
+            position: absolute;
+            color: #fff;
+            background-color: red;
+            padding: 10px 5px;
+            right: -5px;
+            top: -5px;
+            box-shadow:1px 1px 3px rgba(0,0,0,.4);
+        }
+        .product-wrap .item .new:after{
+            content: '';
+            position: absolute;
+            padding: 0px 0;
+            width: 80px;
+            right: 84px;
+            top: -5px;
+            border-right: 19px solid red;
+            border-top:  21px solid transparent;
+            border-bottom:  20px solid transparent;
+
+        }
+        .product-wrap .item .txt{
+            line-height: 1.3em;
+            margin: 20px 20px 80px 20px;
+            /* border: 1px solid blue; */
+        }
+        .product-wrap .item .txt h3{
+            font-size: 22px;
+            padding: 20px 0;
+            padding-bottom: 20px;
+        }
+        .product-wrap .item .txt p{
+            color: #666;
+            text-align: left;
+            padding: 0 0px; 
+        }
+        .product-wrap .item .price{
+            position: absolute;
+            bottom: 20px;
+            /* border: 1px solid red; */
+        }
+        .product-wrap .item .price h5{
+            /* padding: 0 0 0px 20px; */
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .product-wrap .item .price p{
+           text-align: right;
+           line-height: 1.5em;
+        }
+        .product-wrap .item .price p:first-child{
+            position: relative;
+            color: #aaa;
+        }
+        .product-wrap .item .price p:first-child::before{
+            content: '';
+            position: absolute;
+            left: 23px;
+            right: -5px;
+            top: 40%;
+            border-bottom: 2px solid #aaa;
+        }
+        .product-wrap .item .price p:nth-child(2){
+            font-weight: 700;
+        }
+        .product-wrap .item .icon{
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+        }
+        .product-wrap .item .icon i{
+            display: block;
+            align-items: end;
+            padding-right: 15px;
+            font-size: 24px;
+            opacity: 0;
+        }
+        .product-wrap .item:hover .icon i{
+            opacity: 1;
+        }
+
 
 /* ==== footer start ==== */
         footer{
@@ -293,7 +410,70 @@
                 </div>
             </div>
         </div>
-
+        <div class="wrap">
+            <div class="container">
+                <div class="item">
+                    <div class="pic new">
+                        <img src="http://picsum.photos/300/200/?radom=4" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>愛爾蘭海藻鈣鎂D錠PLUS</h3>
+                        <p>鈣鎂比例很重要！沒有適當攝取鎂，鈣將無法達到最佳利用率！根據台灣官方規定(包裝食品營養標示應遵行事項)，一般族群鈣鎂比為3:1，孕乳婦為2.8:1。大醫生技海藻鈣鎂D錠PLUS含有300mg鈣與100mg鎂，其中鈣鎂比剛好為3:1的黃金比例！讓你補鈣同時，也能攝取足夠的鎂，幫助調節生理機能、有助身體正常代謝，鈣鎂互相輔助，在體內達到最好的效果！</p>
+                    </div>
+                    <div class="price">
+                        <h5>建議售價</h5>
+                        <div class="price-1">
+                            <p>$1680</p>
+                            <p>$980</p>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="http://picsum.photos/300/200/?radom=2" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>愛爾蘭海藻鈣鎂D錠PLUS</h3>
+                        <p>鈣鎂比例很重要！沒有適當攝取鎂，鈣將無法達到最佳利用率！根據台灣官方規定(包裝食品營養標示應遵行事項)，一般族群鈣鎂比為3:1，孕乳婦為2.8:1。大醫生技海藻鈣鎂D錠PLUS含有300mg鈣與100mg鎂，其中鈣鎂比剛好為3:1的黃金比例！讓你補鈣同時，也能攝取足夠的鎂，幫助調節生理機能、有助身體正常代謝，鈣鎂互相輔助，在體內達到最好的效果！</p>
+                    </div>
+                    <div class="price">
+                        <h5>建議售價</h5>
+                        <div class="price-1">
+                            <p>$1680</p>
+                            <p>$980</p>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic new">
+                        <img src="http://picsum.photos/300/200/?radom=3" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>愛爾蘭海藻鈣鎂D錠PLUS</h3>
+                        <p>鈣鎂比例很重要！沒有適當攝取鎂，鈣將無法達到最佳利用率！根據台灣官方規定(包裝食品營養標示應遵行事項)，一般族群鈣鎂比為3:1，孕乳婦為2.8:1。大醫生技海藻鈣鎂D錠PLUS含有300mg鈣與100mg鎂，其中鈣鎂比剛好為3:1的黃金比例！讓你補鈣同時，也能攝取足夠的鎂，幫助調節生理機能、有助身體正常代謝，鈣鎂互相輔助，在體內達到最好的效果！</p>
+                    </div>
+                    <div class="price">
+                        <h5>建議售價</h5>
+                        <div class="price-1">
+                            <p>$1680</p>
+                            <p>$980</p>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     <footer>
         <div class="footer-header">
             <h3>社群連結：</h3>
