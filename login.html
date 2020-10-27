@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.會員登入表單</title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap);
+        @import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+         }
+         html,body{
+             height: 100%;
+         }
+         body{
+             background: url(images/01.jpg)no-repeat center center / cover;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+         .login{
+             width: 600px;
+             height: 500px;
+             background-color: rgba(100,100,100,.5);
+             border-radius: 10px;
+             border: 10px solid #fff;
+             box-shadow: 0 0 60px #fff;
+             backdrop-filter: blur(5px);  /*霧面毛玻璃效果*/
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+        .form{
+            width: 400px;
+            color: #fff;
+        }
+        .form h2{
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #fff;
+        }
+        .form .group{
+            margin-bottom: 20px;
+        }
+        .form .group .forgot{
+            color: #ccc;
+            font-size: 10px;
+        }
+        .form label{
+            line-height: 2;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .form input{
+            width: 100%;
+            border: 1px solid #aaa;
+            line-height: 3;
+            border-radius: 5px;
+            outline: none;
+        }
+        .form .btn-group{
+            font-size: 0;
+            margin-top: 50px;
+        }
+        .form .btn{
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #9ecdfc;
+            width: 190px;
+            padding: 10px 0;
+            color: #fff;
+            font-family: 'Noto Sans TC', sans-serif;
+            outline: none;
+        }
+        .form .btn + .btn{
+            margin-left: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="login">
+        <form action="" class="form">
+            <h2>會員登入</h2>
+            <div class="group">
+                <label for="">帳號</label>
+                <input type="text" name="" id="user_id">
+                <a href="#" class="forgot">忘記帳號<i class="fa fa-question-circle" aria-hidden="true"></i></a>
+            </div>
+            <div class="group">
+                <label for="">密碼</label>
+                <input type="text" name="" id="user_password">
+                <a href="#" class="forgot">忘記密碼<i class="fa fa-question-circle" aria-hidden="true"></i></a>
+            </div>
+            <div class="btn-group">
+                <button class="btn">登入</button>
+                <button class="btn">取消</button>
+            </div>
+        </form>
+    </div>
+    
+
+
+</body>
+</html>
