@@ -66,7 +66,6 @@
             margin-top: 50px;
         }
         .form .btn{
-            text-decoration: none;
             font-size: 20px;
             border-radius: 5px;
             border: none;
@@ -80,6 +79,15 @@
         }
         .form .btn + .btn{
             margin-left: 20px;
+        }
+        .form .btn a{
+            text-decoration: none;
+            color: #fff;
+            padding: 50px 70px;
+            box-sizing: border-box;
+        }
+        .form .btn:hover{
+            background-color: #999;
         }
     </style>
 
@@ -95,11 +103,11 @@
             </div>
             <div class="group">
                 <label for="">密碼</label>
-                <input type="text" name="" id="user_password">
+                <input type="password" name="password" value="12345678" id="user_password" ><span class="field-icon"><i class="fa fa-eye" aria-hidden="true"></i><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
                 <a href="#" class="forgot">忘記密碼<i class="fa fa-question-circle" aria-hidden="true"></i></a>
             </div>
             <div class="btn-group">
-                <button class="btn">登入</button>
+                <button class="btn"><a href="index.html">登入</a></button>
                 <button class="btn"><a href="index.html">取消</a></button>
             </div>
         </form>
