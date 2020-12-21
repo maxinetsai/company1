@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCFJWG2D4S"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MCFJWG2D4S');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>company-1</title>
@@ -20,6 +30,7 @@
             position: relative;
         }
         .main-header{
+            position: relative;
             width: 100%;
             position: fixed;
             top: 0;
@@ -47,69 +58,72 @@
         .main-header .main-nav{
             display: flex;
             margin: auto;
-        }
-        .main-header .main-nav li{
             position: relative;
         }
-        .main-header .main-nav ul{
-            position: absolute;
-            /* width: 100%; */
-            top: 30px;
-            right: -50%;
-            padding: 20px;
-            background-color: rgba(30,30,30,.6);
-            display: none;
-        }
-        .main-header .main-nav ul{
-            padding: 10px 0;
-        }
-        .main-header .main-nav ul > li{
-            padding: 10px 0 0px 0;
-            /* border-bottom: 1px solid #999; */
-        }
-        .main-header .main-nav ul a:hover{
-            color: #000;
-            background-color: #ccc;
-        }
-        .main-header .main-nav a{
+        .main-header .main-nav a{ /*第一層選單*/
             text-decoration: none;
-            color: #fff;
-            padding: 0px 1em;
+            color:#fff;
+            padding: 5px 1.5em 0;
+            display: flex;
+            margin: auto;
             position: relative;
-            transform: translateY(0px);
-            transition: .25s;
         }
-        .main-header .main-nav li:hover > ul{
-            display: block;
+        .main-header .main-nav li{ /*第一層選單*/
+            position: relative;
         }
-        .main-header .main-nav a:hover{
-            transform: translateY(-8px);
-        }
-        .main-header .main-nav .line:before{
+        .main-header .main-nav li a:after{ /*通用*/
             content: '';
             position: absolute;
-            left: 50%;
-            right: 50%;
-            bottom: -5px;
+            left: 1em;
+            right: 1em;
+            bottom: 0px;
             height: 0;
-            border-bottom: 1px solid #fff;
-            transition: .3s;
         }
-        .main-header .main-nav a:hover:before{
-            left: 0;
-            right: 0;
+        .main-header .main-nav ul{ /*第二層選單*/
+            width: 100%;
+            position: absolute;
+            top: 26px;
+            left: 60%;
+            background-color: #ccc;
+            box-shadow: 0px 0px 10px #666;
+            padding-top: 5px;
+            display: none;            
+        }
+        .main-header .main-nav ul a{
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+        }
+        .main-header .main-nav ul a:after{
+            content: '';
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            bottom: -1px;
+            border-bottom: 1px dashed #aaa;
+            
+        } 
+        .main-header .main-nav li:hover > a{  /*第一層hover,之後所有的a*/
+            background-color:#000;
+            font-weight: 400;
+        }
+        .main-header .main-nav ul a:hover{  /*第二層的<a>hover,文字變色*/
+            color: #fff;
+        }        
+        .main-header .main-nav li:hover >ul{ /*第一層hover,第二層選單出現*/
+            display: block;
         }
         .main-header .header-search{
             display: flex;
             position: relative;
-            border: 1px solid #ccc;
+            border: 1px solid rgba(255,255,255,0.6);
             border-radius: 20px;
         }
         .main-header .header-search button,
         .main-header .header-search input{
             border: none;
             background-color: transparent;
-            padding: 10px 10px;
+            padding: 5px 10px;
             user-select: none;
         }
         .main-header .header-search button:focus,
@@ -122,9 +136,6 @@
         }
         .main-header .fa:hover{
             color: rgb(255, 0, 0);
-        }
-        .main-header .header-icon{
-
         }
         .main-header .header-icon i{
             padding: 15px 0 15px 10px;
